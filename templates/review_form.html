@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emmatos Fitness & Gym Review Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+   
+    <div class="form-container">
+        <h1>WELCOME TO EMMATOS FITNESS & GYM</h1>
+        <h1>Gym Review Feedback</h1>
+        <form action="{{ url_for('submit_review') }}" method="POST">
+            <label for="name">Your Name (Optional):</label>
+            <input type="text" id="name" name="name" placeholder="Your Name (Optional)">
+            
+            <label for="review">Your Review:</label>
+            <textarea id="review" name="review" rows="4" required></textarea>
+            
+            <button type="submit">Submit Review</button>
+        </form>
+    </div>
+</body>
+</html>
