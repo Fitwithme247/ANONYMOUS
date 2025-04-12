@@ -38,7 +38,7 @@ def submit_review():
         try:
             email_data = {
                     "sender": {"email": "okikidanielayo@gmail.com", "name": "Danilo"},
-                    "to": [{"email": "clairclancy@gmail.com", "name": "clair"}],
+                    "to": [{"email": "okikiayodaniel@gmail.com", "name": "Daniel"}],
                     "subject": customer_name,
                     "htmlContent": review_text
                 }
