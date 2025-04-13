@@ -34,8 +34,15 @@ def submit_review():
         # Get data from the form
         customer_name = request.form['name']
         review_text = request.form['review']
+   
+        
+        #return redirect(url_for('success'))
 
-        try:
+
+
+
+
+    try:
             email_data = {
                     "sender": {"email": "okikidanielayo@gmail.com", "name": "Danilo"},
                     "to": [{"email": "okikiayodaniel@gmail.com", "name": "Daniel"}],
@@ -46,20 +53,15 @@ def submit_review():
             print(response.text)
 
             if response.status_code == 201:
-                return jsonify({"message": "Email sent successfully!", "status": response.status_code, "data": response.json()}), 200
+                return render_template('success.html')
             else:
                 return jsonify({"message": "Failed to send email", "status": response.status_code, "error": response.
                 son()}), response.status_code
-        except Exception as e:
+    except Exception as e:
             return f"Error sending email: {e}"
 
 
 
-
-# Thank you page after submission
-@app.route('/thank_you')
-def thank_you():
-    return "Thank you for your review! It has been sent successfully."
 
 if __name__ == '__main__':
     app.run(debug=True)
