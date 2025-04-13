@@ -55,8 +55,6 @@ def submit_review():
 
 
 
-        
-
 
 # Thank you page after submission
 @app.route('/thank_you')

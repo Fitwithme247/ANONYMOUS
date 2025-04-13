@@ -1,4 +1,4 @@
-body {
+/* body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f9;
     display: flex;
@@ -35,6 +35,7 @@ textarea {
     margin: 10px 0;
     border-radius: 4px;
     border: 1px solid #ddd;
+    align-content: center;
 }
 
 button {
@@ -49,4 +50,103 @@ button {
 
 button:hover {
     background-color: #45a049;
+}
+ */
+
+
+ body, h1, h3, p, label {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(120deg, #2c3e50, #3498db);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.form-container {
+    background-color: #cfd1e4;
+    border-radius: 10px;
+    padding: 30px 40px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    width: 100%;
+}
+
+.form-container h1 {
+    color: #2c3e50;
+    font-size: 28px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.form-container h3 {
+    color: #555;
+    font-weight: 500;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Form styling */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #2c3e50;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+/* Submit Button */
+button[type="submit"] {
+    background-color: #3498db;
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
+/* Success Message */
+.success-message {
+    display: none;
+    margin-top: 20px;
+    background-color: #d4edda;
+    color: #155724;
+    padding: 15px;
+    border-left: 5px solid #28a745;
+    border-radius: 6px;
 }
